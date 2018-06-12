@@ -1,0 +1,73 @@
+body {
+    /* background: linear-gradient(to bottom, #240b36, #c31432); */
+    /* background-color: #000000; */
+    background: #EF3B36;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #FFFFFF, #EF3B36);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #FFFFFF, #EF3B36); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    height: 200px;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.board {
+    width: 600px;
+    height: 350px;
+    background-color: white;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-start{
+    background: #d93434;
+    background-image: -webkit-linear-gradient(top, #d93434, #803b3b);
+    background-image: -moz-linear-gradient(top, #d93434, #803b3b);
+    background-image: -ms-linear-gradient(top, #d93434, #803b3b);
+    background-image: -o-linear-gradient(top, #d93434, #803b3b);
+    background-image: linear-gradient(to bottom, #d93434, #803b3b);
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+
+.btn:hover {
+    background: #f79999;
+    text-decoration: none;
+}
+
+.game-on {
+    background-image: url(../images/boxing-ring.jpg);
+    background-size: cover;
+}
+
+.board div {
+    width: 10%;
+    height: 100%;
+}
+
+.computer {
+    background-color: blue;
+}
+
+.player {
+    background-color: red;
+}
