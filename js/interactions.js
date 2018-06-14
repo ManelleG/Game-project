@@ -88,32 +88,25 @@ Character.prototype.attack = function () {
     }
 
     if ($("#" + previousTile).hasClass("player") || $("#" + nextTile).hasClass("computer")){
-        if (this.isPlayer){
-            // computer.health -=5;
+        if (this.isPlayer){ // if player is attacking
             if (computer.receiveDamage()){
                 //PLAYER WON!
                 $(".board").addClass("player-won");
-                $(".computer").removeClass();
-                $(".player").removeClass();
+                $(".board").children().remove();
             }
             console.log("computer.health " + computer.health)
         }
-        else {
-            // player.health -= 5;
+        else { // if computer is attacking
             if (player.receiveDamage()){
-                //COMPUTER WON
+                //COMPUTER WON!
                 $(".board").addClass("computer-won");
-                $(".computer").removeClass();
-                $(".player").removeClass();
+                $(".board").children().remove();
+
             }
 
             console.log("player.health " + player.health);
         }
     }
-    // else {
-    //     // console.log("no one to attack");
-    // }
-
     $("#" + this.position).addClass(this.type);
 }
 
@@ -133,16 +126,6 @@ Character.prototype.receiveDamage = function () {
 Player.prototype.mouvement = function() {
     document.onkeydown = (e) => {
         switch (e.keyCode){
-            //Up arrow
-            // case 38:
-            //     this.move(0,-1);
-            //     break;
-
-            //Down arrow
-            // case 40:
-            //     this.move(0,1);
-            //     break;
-
             //Left arrow
             case 37:
                 this.moveLeft();
@@ -176,35 +159,6 @@ Computer.prototype.autoMouvement = function () {
 
 
 
-//Animations:
-// var tID; //we will use this variable to clear the setInterval()
-
-// function stopAnimate () {
-//     clearInterval(tID);
-// }
-
-// function animateScript() {
-//     var position = 49.8; //start position for the image slicer
-//     const interval = 100; //100 ms of interval for the setInterval()
-//     const diff = 49.8;
-
-//     tID = setInterval ( () => {
-//         document.getElementById("image").style.backgroundPosition = `-${position}px 0px`;
-//         //we use the ES6 template literal to insert the variable "position"
-//         if (position < 299){
-//             position = position + diff;
-//         }
-//         //we increment the position by 256 each time
-//         else
-//         { position = 49.8 }
-//         //reset the position to 256px, once position exceeds 1536px
-//         }
-//         , interval ); //end of setInterval
-// } //end of animateScript()
-
-// function stopGame() {
-//     var stop = setInterval
-// }
 
 $(document).ready(function() {
     $(".btn-start").click(function () {
@@ -212,8 +166,17 @@ $(document).ready(function() {
         $(".board").addClass("game-on");
         startNewGame();
         player.mouvement();
-
         // "AI":
         computer.autoMouvement();
+
+
+        // var timer = 20;
+        // $("p").text(timer);
+        // var countDown = setInterval(function() {
+        //     if (timer != 0){
+        //         timer -= 1;
+        //         $("p").text(timer);
+        //     }
+        // },1000);
     });
 });

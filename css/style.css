@@ -1,3 +1,8 @@
+/* @font-face {
+    font-family: "Digi";
+    src: url("fonts/ds-digib.ttf");
+  } */
+
 body {
     /* background: linear-gradient(to bottom, #240b36, #c31432); */
     /* background-color: #000000; */
@@ -33,20 +38,24 @@ header {
 }
 
 .btn-start{
-    background: #d93434;
+    /* background: #d93434;
     background-image: -webkit-linear-gradient(top, #d93434, #803b3b);
     background-image: -moz-linear-gradient(top, #d93434, #803b3b);
     background-image: -ms-linear-gradient(top, #d93434, #803b3b);
     background-image: -o-linear-gradient(top, #d93434, #803b3b);
-    background-image: linear-gradient(to bottom, #d93434, #803b3b);
-    -webkit-border-radius: 60;
-    -moz-border-radius: 60;
+    background-image: linear-gradient(to bottom, #d93434, #803b3b); */
+    /* -webkit-border-radius: 60;
+    -moz-border-radius: 60; */
+    background-image: url("../images/start\ button.png");
+    background-size: cover;
     border-radius: 60px;
     font-family: Arial;
     color: #ffffff;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
+    width: 500px;
+    height: 90px;
   }
 
 
@@ -55,8 +64,9 @@ header {
     text-decoration: none;
 }
 
-.-on {
-    background-image: url(../images/boxing-ring.jpg);
+.game-on {
+    background-image: url(../images/chinese-arena.gif);
+    background-position: center;
     background-size: cover;
 }
 
@@ -74,12 +84,6 @@ header {
 }
 
 .player {
-    /* background-color: red; */
-    /* height: 102px;
-    width: 51px;
-    background: url("https://image.ibb.co/g7BFud/walking_girl.png") 0px 0px;
-    background-position: bottom;
-    background-attachment: fixed;*/
     background-image: url("../images/player-debout.png");
     background-position: bottom;
     background-repeat: no-repeat;
@@ -93,16 +97,13 @@ header {
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 120%;
-    /* background-size: contain; */
     background-position-y: 80%;
-    /* padding: 0 50px; */
 }
 
 .attack-computer {
     background-image: url("../images/computer-attack.png");
     background-position: bottom;
     background-repeat: no-repeat;
-    /* background-size: 100%; */
     background-position-y: 80%;
     background-size: contain;
 
@@ -110,16 +111,14 @@ header {
 
 .computer-won {
     background-image : url("https://media.giphy.com/media/JTfTkkuCAppmg/giphy.gif");
+    z-index: 1000;
 }
 
 .player-won {
     background-image: url("https://media.giphy.com/media/tqRyxqUQQty2A/giphy.gif");
+    z-index: 1000;
 }
 
-
-
-/* #image {
-    height: 102px;
-    width: 51px;
-    background: url("https://image.ibb.co/g7BFud/walking_girl.png") 0px 0px;
+/* p {
+    font-family: "Digi";
 } */
