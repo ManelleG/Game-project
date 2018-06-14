@@ -22,13 +22,14 @@ header {
 }
 
 .board {
-    width: 600px;
-    height: 350px;
+    width: 800px;
+    height: 500px;
     background-color: white;
     margin-top: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 
 .btn-start{
@@ -54,20 +55,71 @@ header {
     text-decoration: none;
 }
 
-.game-on {
+.-on {
     background-image: url(../images/boxing-ring.jpg);
     background-size: cover;
 }
 
 .board div {
-    width: 10%;
+    width: calc( 100% / 5 );
     height: 100%;
 }
 
 .computer {
-    background-color: blue;
+    background-image: url("../images/computer-debout.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 80%;
 }
 
 .player {
-    background-color: red;
+    /* background-color: red; */
+    /* height: 102px;
+    width: 51px;
+    background: url("https://image.ibb.co/g7BFud/walking_girl.png") 0px 0px;
+    background-position: bottom;
+    background-attachment: fixed;*/
+    background-image: url("../images/player-debout.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 80%;
+
 }
+
+.attack-player {
+    background-image: url("../images/coup-de-poing.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    /* background-size: contain; */
+    background-position-y: 80%;
+    /* padding: 0 50px; */
+}
+
+.attack-computer {
+    background-image: url("../images/computer-attack.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    background-position-y: 80%;
+    background-size: contain;
+
+}
+
+.computer-won {
+    background-image : url("https://media.giphy.com/media/JTfTkkuCAppmg/giphy.gif");
+}
+
+.player-won {
+    background-image: url("https://media.giphy.com/media/tqRyxqUQQty2A/giphy.gif");
+}
+
+
+
+/* #image {
+    height: 102px;
+    width: 51px;
+    background: url("https://image.ibb.co/g7BFud/walking_girl.png") 0px 0px;
+} */
