@@ -99,7 +99,7 @@ Character.prototype.attack = function () {
                 $(".board").addClass("player-won");
                 $(".board").children().remove();
                 //sound off
-                $("audio").remove()
+                $("#punch").remove()
             }
             console.log("computer.health " + computer.health)
             $("#" + computer.position).addClass("computer-receive");
@@ -117,7 +117,7 @@ Character.prototype.attack = function () {
                 $(".board").addClass("computer-won");
                 $(".board").children().remove();
                 //sound off
-                $("audio").remove()
+                $("#punch").remove()
             }
             console.log("player.health " + player.health);
             $("#" + player.position).addClass("player-receive");
@@ -178,7 +178,7 @@ Computer.prototype.autoMouvement = function () {
         if (randomFunction === 2){
             this.attack();
         }
-    }, (Math.floor(Math.random()*1000)) + 500);
+    }, (Math.floor(Math.random()*400)) + 100);
 }
 
 
@@ -206,14 +206,14 @@ $(document).ready(function() {
                     $(".board").addClass("player-won");
                     $(".board").children().remove();
                     //sound off
-                    $("audio").remove()
+                    $("#punch").remove()
                 }
                 else {
                     //Ajouter image du computer en train de gagner
                     $(".board").addClass("computer-won");
                     $(".board").children().remove();
                     //sound off
-                    $("audio").remove()
+                    $("#punch").remove()
                 }
             }
         },1000);
